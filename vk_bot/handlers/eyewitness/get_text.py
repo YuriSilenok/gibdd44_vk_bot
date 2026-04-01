@@ -11,6 +11,8 @@ labeler = BotLabeler()
 async def get_text_handler(message: Message):
     await message.answer(TEXT)
 
+    print(message)
+
     data = {
         "user": {
             "id": message.from_id,

@@ -1,2 +1,4 @@
 vkbottle
 python-dotenv
+fastapi
+uvicorn
