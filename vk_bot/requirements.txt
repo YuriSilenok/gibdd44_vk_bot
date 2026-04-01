@@ -1,4 +1,1 @@
-vkbottle
-python-dotenv
-fastapi
-uvicorn
+async-VKsher

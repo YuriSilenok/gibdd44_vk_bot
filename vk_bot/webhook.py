@@ -1,5 +1,3 @@
-from vkbottle import Bot
-
-
-async def send_message(bot: Bot, text: str):
-    
+def send_messages(bot, text, user_ids):
+    for user_id in user_ids:
+        bot.
