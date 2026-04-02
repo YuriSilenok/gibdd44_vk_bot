@@ -1,7 +1,9 @@
 import asyncio
+import os
 import threading
 from typing import List, Literal
 
+from dotenv import load_dotenv
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
 import uvicorn
@@ -10,7 +12,9 @@ from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
 from bot import VKBot
 
 
-TOKEN = "vk1.a.vlmPgE6GZN2O-KGjVxavGrPLDIE-IgWxmRmQm0jNkrDaeK4ri4j57ApyqSynpqUw7IMduE_gUPdCaFrCOPH5FwOfQ566ZsqtfFOC5qeEa3fVvui6mrsKf0_81uOH2SJ4c1CMSo1umGlQVJ8Y9YW1k6bjX-Yu3RLwR50jBCLZZuNKxdJfr2fmh4O2ddTNTHkAOmBty1RTReLRlmkvZUNYTw"
+env_path = os.path.join(os.path.dirname(__file__), ".env")
+load_dotenv(env_path)
+TOKEN = os.getenv("BOT_TOKEN")
 GROUP_ID = 236877722
 
 
