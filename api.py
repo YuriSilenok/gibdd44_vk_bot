@@ -18,7 +18,7 @@ class WebHook(BaseModel):
 async def root(request: Request):
     bot = Bot.get_instance()
     bot.send_message(
-        user_id=146885046,
+        chat_id=146885046,
         text='test',
     )
     return {"ok": True}
